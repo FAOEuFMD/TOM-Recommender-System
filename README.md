@@ -2,6 +2,10 @@
 ## Purpose
 The goal of this project is to create a course recommender system for country-level managers within The European Commission for the Control of Foot-and-Mouth Disease(EuFMD). The recommender system is designed to identify and minimise gaps in emergency preparedness for FMD And Similar Transboundary animal diseases. The recommender will recommend courses that will bridge gaps in knowledge that exist among veterinary staff at a country level.
 
+In other words, this recommender should do two things:
+1. Identifies skills gaps in veterinary professionals of a given country
+2. Recommends courses that will help the country bridge the skills gaps most effectively 
+
 ## Project status
 As of July 2024 initial EDA has been completed and progress in identifying skills gaps has been made. 
 
