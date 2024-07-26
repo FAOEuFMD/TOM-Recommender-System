@@ -37,3 +37,11 @@ In order to identify a skills gap for a given country the final cleaned enrolmen
 This is our initial approach and does not take into account all available data including but not limited to course level, country risk, geography, etc...
 
 ## Project overview as of July 2024
+
+## Next Steps as of July 2024
+1. Use more data. This initial project was a pilot and only used a subset of the user data. To explore the data trends in more detail moodle_courses, moodle_enrols, moodle_users
+2. Create and experiment with different recommenders. Consider more carefully how to identify skills gaps within a country and explore different approaches to mitigating the risk (e.g. how to prioritise which courses are needed, how to factor in geography and disease risk levels, etc…)
+3. Add more differentiators or factors on the recommender systems such as Country, progress of the course, the last time continued on the course (in this case for example if the last login was too past, re-recommend again the course), course level (Beginner, Intermediate and Advanced) etc.
+4. Collaborate with full stack colleagues to create a first version of a course recommendation system
+
+
