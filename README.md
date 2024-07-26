@@ -20,12 +20,20 @@ The European Commission for the Control of Foot-and-Mouth Disease(EuFMD) has def
 
    Click [HERE](https://trello.com/b/SrsgHKzM/get-prepared-the-wall) to see the "Get prepared wall" and the skill "bricks" that make up each of these four categories
 
-### Data used
+## Data used
 The following datasets were used for the initial pilot/ EDA:
 - tom_enrolments database: This was used to identify how many people within a country posessed a particular skill/ "brick". This data needed to be joined with other information in order to generate the necessary calculations
 - Excel sheet with the "get prepared" brick mappings. This listed each course main topic and defined the skills/ "bricks" covered in each main topic. This was provided by a EuFMD staff member
+- master_courses table. This contains information about all the courses including shortname, longname, language, and main_topic.  This was necessary to incorporate into the tom_enrolments table to get the accurate main_topic for each course. The tom_enrolments and master_courses tables were merged on course_id and moodle_id respectively.
 
-### Identifying the skills gaps at a country level
+## Data cleaning: labeling, imputation, and merging
 
+## Identifying the skills gaps at a country level: approach
+In order to identify a skills gap for a given country the final cleaned enrolments dataset (complete with brick mapping data) needs to be manipulated in the following ways (note: we only consider courses that are fully completed):
+1. enrolments data is grouped by learner country
+2. For each country and brick type we count the number of bricks that were acquired
+3. The lowest brick counts indicate skills gaps
+
+This is our initial approach and does not take into account all available data including but not limited to course level, country risk, geography, etc...
 
 ## Project overview as of July 2024
