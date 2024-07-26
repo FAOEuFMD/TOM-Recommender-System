@@ -28,15 +28,15 @@ The following datasets were used for the initial pilot/ EDA:
 
 ## Data cleaning: labeling, imputation, and merging
 ### Labeling: main actions
-Brick mapping: Insead of having an 'X' indicate whether a course covers a particular skill we use 1
-Add the brick category to the brick mapping column titles to make EDA easier
+- Brick mapping: Insead of having an 'X' indicate whether a course covers a particular skill we use 1
+- Add the brick category to the brick mapping column titles to make EDA easier
 
 ### Imputation: main actions
-Drop main_topics that are not listed in the brick mapping
-Fill NaN values in brick mapping with zeroes. This is to indicate a skill is NOT present in a topic
+- Drop main_topics that are not listed in the brick mapping
+- Fill NaN values in brick mapping with zeroes. This is to indicate a skill is NOT present in a topic
 
 ### Merging: main actions
-Use master_courses to get the accurate main_topic for each course. The tom_enrolments and master_courses tables were merged on course_id and moodle_id respectively.
+- Use master_courses to get the accurate main_topic for each course. The tom_enrolments and master_courses tables were merged on course_id and moodle_id respectively.
 
 
 ## Identifying the skills gaps at a country level: approach
