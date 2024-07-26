@@ -48,6 +48,7 @@ In order to identify a skills gap for a given country the final cleaned enrolmen
 This is our initial approach and does not take into account all available data including but not limited to course level, country risk, geography, etc...
 
 ## Project overview as of July 2024
+For a full overview please review [this slide deck](https://docs.google.com/presentation/d/1rH0R3LdoHWJoFR_Ad3iZsAuQ5ksn8qT-bvrOoUCIGeg/edit?usp=sharing)
 
 ## Next Steps as of July 2024
 1. Use more data. This initial project was a pilot and only used a subset of the user data. To explore the data trends in more detail moodle_courses, moodle_enrols, moodle_users
