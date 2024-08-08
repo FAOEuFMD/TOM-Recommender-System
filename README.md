@@ -23,12 +23,11 @@ The European Commission for the Control of Foot-and-Mouth Disease(EuFMD) has def
 ## Data used
 The following datasets were used for the initial pilot/ EDA:
 - tom_enrolments database: This was used to identify how many people within a country posessed a particular skill/ "brick". This data needed to be joined with other information in order to generate the necessary calculations
-- Excel sheet with the "get prepared" brick mappings. This listed each course main topic and defined the skills/ "bricks" covered in each main topic. This was provided by a EuFMD staff member
+- Excel sheet with the "brick_mapping" brick mappings. This listed each course main topic and defined the skills/ "bricks" covered in each main topic. This was provided by a EuFMD staff member
 - master_courses table. This contains information about all the courses including shortname, longname, language, and main_topic.  This was necessary to incorporate into the tom_enrolments table to get the accurate main_topic for each course. The tom_enrolments and master_courses tables were merged on course_id and moodle_id respectively.
 
 ## Data cleaning: labeling, imputation, and merging
 ### Labeling: main actions
-- Brick mapping: Insead of having an 'X' indicate whether a course covers a particular skill we use 1
 - Add the brick category to the brick mapping column titles to make EDA easier
 
 ### Imputation: main actions
@@ -36,7 +35,7 @@ The following datasets were used for the initial pilot/ EDA:
 - Fill NaN values in brick mapping with zeroes. This is to indicate a skill is NOT present in a topic
 
 ### Merging: main actions
-- Use master_courses to get the accurate main_topic for each course. The tom_enrolments and master_courses tables were merged on course_id and moodle_id respectively.
+- Use master_courses to get the accurate main_topic for each course. The tom_enrolments and master_courses tables were merged on course_shortname and shortname respectively.
 
 
 ## Identifying the skills gaps at a country level: approach
@@ -54,6 +53,7 @@ For a full overview please review [this slide deck](https://docs.google.com/pres
 1. Use more data. This initial project was a pilot and only used a subset of the user data. To explore the data trends in more detail moodle_courses, moodle_enrols, moodle_users
 2. Create and experiment with different recommenders. Consider more carefully how to identify skills gaps within a country and explore different approaches to mitigating the risk (e.g. how to prioritise which courses are needed, how to factor in geography and disease risk levels, etc…)
 3. Add more differentiators or factors on the recommender systems such as Country, progress of the course, the last time continued on the course (in this case for example if the last login was too past, re-recommend again the course), course level (Beginner, Intermediate and Advanced) etc.
-4. Collaborate with full stack colleagues to create a first version of a course recommendation system
+4. We have imported our recommender system table (recommender_system_mapping) to EuFMD Database, under db_training. This table yet not linked with other tables, which this can be also future work.
+5. Collaborate with full stack colleagues to create a first version of a course recommendation system
 
 
